@@ -9,6 +9,7 @@ import SignUP from "./Components/Account/SignUP";
 import SignIN from "./Components/Account/SignIN";
 import Landingpage from "./Components/LandingPage/landingpage";
 import Product from "./Components/ProductPage/ProductPage";
+import Cat from "./Components/CategoryPage/CategoryPage"
 
 
 const Routes = () => {
@@ -24,6 +25,7 @@ const Routes = () => {
                 <Route path="/product" component={Product} exact={true}  />
                 <Route path="/signup" component={SignUP} exact={true}  />
                 <Route path="/signin" component={SignIN} exact={true}  />
+                <Route path="/categories" component={Cat} exact={true}  />
 
             </Switch>
 
