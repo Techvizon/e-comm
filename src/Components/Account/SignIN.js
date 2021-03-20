@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Navbar from '../LandingPage/navbar';
+import Navbar from '../Commons/Navbar/navbar';
 import '../Account/Account.css'
 
 function SignIN() {

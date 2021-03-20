@@ -1,13 +1,13 @@
 import React from 'react';
 
-import Navbar from '../LandingPage/navbar';
-import img from '../Media/iphone.jpg';
-import inr from '../Media/inr.png';
-import star from '../Media/star.png';
-import starh from '../Media/starhalf.png';
-import check from '../Media/check.png';
-import del from '../Media/del.png';
-import next from '../Media/next.png';
+import Navbar from '../Commons/Navbar/navbar';
+import img from '/Users/MWxStarBoy/Desktop/Ecom/site/src/assets/img/iphone.jpg';
+import inr from '/Users/MWxStarBoy/Desktop/Ecom/site/src/assets/img/inr.png';
+import star from '/Users/MWxStarBoy/Desktop/Ecom/site/src/assets/img/star.png';
+import starh from '/Users/MWxStarBoy/Desktop/Ecom/site/src/assets/img/starhalf.png';
+import check from '/Users/MWxStarBoy/Desktop/Ecom/site/src/assets/img/check.png';
+import del from '/Users/MWxStarBoy/Desktop/Ecom/site/src/assets/img/del.png';
+import next from '/Users/MWxStarBoy/Desktop/Ecom/site/src/assets/img/next.png';
 
 function Product () {
     return(

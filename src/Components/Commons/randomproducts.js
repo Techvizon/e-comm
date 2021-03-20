@@ -1,6 +1,5 @@
 import React from 'react';
-
-import img from '../Media/iphone.jpg'
+import img from '/Users/MWxStarBoy/Desktop/Ecom/site/src/assets/img/iphone.jpg';
 
 function Random() {
     return(

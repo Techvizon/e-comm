@@ -1,9 +1,9 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import Nav from './navbar';
-import Slid from './slider';
-import Random from './randomproducts';
+import Nav from '../Commons/Navbar/navbar';
+import Slid from '../Slider/slider';
+import Random from '../Commons/randomproducts';
 
 function Landingpage() {
     return(

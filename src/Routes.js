@@ -6,6 +6,7 @@ import {
   Link
 } from "react-router-dom";
 import SignUP from "./Components/Account/SignUP";
+import SignIN from "./Components/Account/SignIN";
 import Landingpage from "./Components/LandingPage/landingpage";
 import Product from "./Components/ProductPage/ProductPage";
 
@@ -22,6 +23,7 @@ const Routes = () => {
                 <Route path="/" component={Landingpage} exact={true}  />
                 <Route path="/product" component={Product} exact={true}  />
                 <Route path="/signup" component={SignUP} exact={true}  />
+                <Route path="/signin" component={SignIN} exact={true}  />
 
             </Switch>
 
