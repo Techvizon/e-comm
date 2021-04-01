@@ -1,5 +1,5 @@
 import react from 'react';
-import Navbar from '../Commons/Navbar/navbar';
+import  SideBar  from "../Commons/SideBar/SideBar";
 
 import img from '../../assets/img/catimg.jpg';
 
@@ -7,52 +7,68 @@ import img from '../../assets/img/catimg.jpg';
 const Cat = () =>{
     return(
         <>
-        <Navbar/>
-        <div className='container'>
-            <div className='row'>
-            <div className='col-md-12 text-center'>
-                    <br/>
-                    <h1>All Categories</h1>
-                    <br/>
-                    </div>
-         </div>
         
+       
+           
+          <SideBar>
+          <div >
+			<h3 class="text-center">
+				h3. Lorem ipsum dolor sit amet.
+			</h3>
+			<div class="row">
+				<div class="col-md-4">
+                <div class="card" style={{width:"18rem"}}>
+  <img src={img} class="card-img-top" alt="..."/>
+  <div class="card-body">
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div>
+				</div>
+				<div class="col-md-4">
+                <div class="card" style={{width:"18rem"}}>
+  <img src={img} class="card-img-top" alt="..."/>
+  <div class="card-body">
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div>
+				</div>
+				<div class="col-md-4">
+                <div class="card" style={{width:"18rem"}}>
+  <img src={img} class="card-img-top" alt="..."/>
+  <div class="card-body">
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div>
+				</div>
+				
+			</div>
+			<div class="row">
+				<div class="col-md-3">
+				</div>
+				<div class="col-md-3">
+				</div>
+				<div class="col-md-3">
+				</div>
+				<div class="col-md-3">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3">
+				</div>
+				<div class="col-md-3">
+				</div>
+				<div class="col-md-3">
+				</div>
+				<div class="col-md-3">
+				</div>
+			</div>
+		</div>
+
+          </SideBar>
+      
         
-        <div className="row row-cols-1 row-cols-md-2 g-4">
-            <div className="col-md-3">
-                <div className="card">
-                  <img src={img} className="card-img-top" alt='Image 1'/>
-                  <div className="card-body">
-                    <h5 className="card-title, text-center">Card title</h5>
-                  </div>
-                </div>
-            </div>
-            <div className="col-md-3">
-                <div className="card">
-                <img src={img} className="card-img-top" alt='Image 2'/>
-                <div className="card-body">
-                    <h5 className="card-title, text-center">Card title</h5>
-                </div>
-                </div>
-            </div>
-            <div className="col-md-3">
-                <div className="card">
-                <img src={img} className="card-img-top" alt='Image 3'/>
-                <div className="card-body">
-                    <h5 className="card-title, text-center">Card title</h5>
-                </div>
-                </div>
-            </div>
-            <div className="col-md-3">
-                <div className="card">
-                <img src={img} className="card-img-top" alt='Image 4'/>
-                <div className="card-body">
-                    <h5 className="card-title, text-center">Card title</h5>
-                </div>
-                </div>
-            </div>
-            </div>
-            </div>
+ 
+            
         </> 
     );
 }

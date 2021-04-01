@@ -5,6 +5,7 @@ import Nav from '../Commons/Navbar/navbar';
 import Slid from '../Slider/slider';
 import Random from '../Commons/randomproducts';
 import Navsub from '../Commons/NavBarsub/navbarsub';
+import Prolist from '../Product-Listing/productlisting';
 
 import Can from '../Canvas';
 
@@ -14,9 +15,10 @@ function Landingpage() {
             
              <Nav/>
              <Navsub/>
-             <Slid/>
+             <Prolist/>
+             {/*<Slid/>
              <Random/>
-             <Random/>
+             <Random/>*/}
         </div>
            
           
