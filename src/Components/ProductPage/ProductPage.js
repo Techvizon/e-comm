@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Navbar from '../Commons/Navbar/navbar';
+
 import img from '../../assets/img/iphone.jpg';
 import inr from '../../assets/img/inr.png';
 import star from '../../assets/img/star.png';
@@ -12,7 +12,7 @@ import next from '../../assets/img/next.png';
 function Product () {
     return(
         <>
-        <Navbar/>
+
         <div className='container-fluid'>
             <div className='row'>
                 <div className='col-mid-12'>

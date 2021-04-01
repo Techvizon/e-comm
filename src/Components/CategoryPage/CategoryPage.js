@@ -1,8 +1,6 @@
 import react from 'react';
-import  SideBar  from "../Commons/SideBar/SideBar";
-
 import img from '../../assets/img/catimg.jpg';
-
+import SideBar from "../Commons/SideBar/SideBar";
 
 const Cat = () =>{
     return(
