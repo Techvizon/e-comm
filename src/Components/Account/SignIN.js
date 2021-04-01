@@ -1,12 +1,9 @@
 import React from 'react';
-
-import Navbar from '../Commons/Navbar/navbar';
 import '../Account/Account.css'
 
 function SignIN() {
     return(
         <>
-        <Navbar/>
         <div className='container'>
             <div className='row'>
                 <div className='col-md-12 text-center'>

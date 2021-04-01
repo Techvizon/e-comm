@@ -1,5 +1,5 @@
 import react from 'react';
-import Navbar from '../Commons/Navbar/navbar';
+
 
 import img from '../../assets/img/catimg.jpg';
 
@@ -7,7 +7,7 @@ import img from '../../assets/img/catimg.jpg';
 const Cat = () =>{
     return(
         <>
-        <Navbar/>
+
         <div className='container'>
             <div className='row'>
             <div className='col-md-12 text-center'>

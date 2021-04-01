@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Navbar from '../Commons/Navbar/navbar';
+
 import '../Account/Account.css'
 import { useHistory } from "react-router-dom";
 import {Link} from "react-router-dom";
@@ -12,7 +12,7 @@ function SignUP() {
 
     return(
         <>
-        <Navbar/>
+        
         <div className='container'>
             <div className='row'>
             <div className='col-md-12 text-center'>

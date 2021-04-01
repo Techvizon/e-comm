@@ -10,15 +10,20 @@ import SignIN from "./Components/Account/SignIN";
 import Landingpage from "./Components/LandingPage/landingpage";
 import Product from "./Components/ProductPage/ProductPage";
 import Cat from "./Components/CategoryPage/CategoryPage"
+import Navbar from "./Components/Commons/Navbar/navbar";
+import Navsub from "./Components/Commons/NavBarsub/navbarsub";
 
 
 const Routes = () => {
 
 
     return(
+        <>
+       
 
         <Router>
-
+        <Navbar/>
+        <Navsub/>
             <Switch>
 
                 <Route path="/" component={Landingpage} exact={true}  />
@@ -31,7 +36,7 @@ const Routes = () => {
 
 
         </Router>
-
+</>
     )
 
 

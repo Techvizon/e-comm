@@ -1,18 +1,29 @@
-import React from 'react';
-
+import React, { useState } from 'react';
+import classes from './NavbarSub.module.css'
+import { ReactComponent as HamburgerIcon } from '../../../assets/img/hamburger_icon.svg';
+import sb from '../../../assets/img/hamburger_icon.svg';
 const Navsub = () =>{
+
+    
     return(
+        <>
         <nav className="navbar-xs navbar-expand navbar-light bg-light">
         <div className="container-fluid">
        
-            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSub" aria-controls="navbarSub" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-            </button>
+           
+            
             <div className="collapse navbar-collapse" id="navbarSub">
+            {/* <button class="btn btn-outline-dark btn-sm" type="button"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBackdrop" aria-controls="offcanvasWithBackdrop">
+           All
+            </button> 
+&nbsp;&nbsp; */}
+
+{/* <HamburgerIcon className="btn btn-sm" type="button"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBackdrop" aria-controls="offcanvasWithBackdrop"  className="sub_ham"/> */}
+            
+            <img className={classes.sub_ham} src={sb}  type="button"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBackdrop" aria-controls="offcanvasWithBackdrop"/>
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            <button className="btn btn-sm">
-            <span className="navbar-toggler-icon"></span>
-            </button>
+            
+
 
            
 
@@ -26,6 +37,25 @@ const Navsub = () =>{
             </div>
         </div>
         </nav>
+        
+
+      
+
+
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasWithBackdrop" aria-labelledby="offcanvasWithBackdropLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasWithBackdropLabel">Offcanvas with backdrop</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <p>.....</p>
+  </div>
+</div>
+
+
+
+
+        </>
     );
 }
 
