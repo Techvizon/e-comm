@@ -12,6 +12,7 @@ import Product from "./Components/ProductPage/ProductPage";
 import Cat from "./Components/CategoryPage/CategoryPage"
 import Navbar from "./Components/Commons/Navbar/navbar";
 import Navsub from "./Components/Commons/NavBarsub/navbarsub";
+import Prolist from "./Components/Product-Listing/productlisting";
 
 
 const Routes = () => {
@@ -26,7 +27,7 @@ const Routes = () => {
         <Navsub/>
             <Switch>
 
-                <Route path="/" component={Landingpage} exact={true}  />
+                <Route path="/" component={Prolist} exact={true}  />
                 <Route path="/product" component={Product} exact={true}  />
                 <Route path="/signup" component={SignUP} exact={true}  />
                 <Route path="/signin" component={SignIN} exact={true}  />
