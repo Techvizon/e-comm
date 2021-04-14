@@ -1,17 +1,18 @@
-import react, { useState } from 'react';
+import react, { useEffect, useState } from 'react';
 
 const Checkbox = (props) =>{
-    const [chkboxFilterData,setchkboxFilterData] = useState( [
-        {id:1, name:"C1", checked:false},
-        {id:2, name:"C2", checked:false},
-        {id:3, name:"C3", checked:false},
-        {id:4, name:"C4", checked:false},
-        {id:5, name:"C5", checked:false},
-    ]);
+   
+    const [chkboxFilterData,setchkboxFilterData] = useState(props.data.data);
 
     const onChangeChkBox = (chkd,id) => {
         console.log(chkd, id);
-
+        
+        /*
+        1. Deep clone --> let tmpData = [...Data]
+        2. Iterate the temp array --> for() foreach() map() filter()
+        3. Update data
+        */
+        
         let tmpData = [...chkboxFilterData];
         tmpData.forEach((i) => {
           return i.id === id ? (i.checked = chkd) : null;
@@ -24,21 +25,22 @@ const Checkbox = (props) =>{
     return(
             <>
             <h5 className='text-center'>{props.typefilter}</h5>
-            <ul class="list-group">
-           { chkboxFilterData.map((item)=>{
+            <ul className="list-group mb-3">
+                
+           {chkboxFilterData && chkboxFilterData.map((item)=>{
 
                return(
-                <li key={item.id} class="list-group-item">
-                <input id={item.id}  checked={item.checked} onChange={(e)=>{console.log(e.target.checked,item.id );onChangeChkBox(e.target.checked,item.id)}} class="form-check-input me-1" type="checkbox"/>
+                <li key={item.id} className="list-group-item">
+                <input key={item.id} id={item.id}  checked={item.checked} onChange={(e)=>{console.log(e.target.checked,item.id );onChangeChkBox(e.target.checked,item.id)}} className="form-check-input me-1" type="checkbox"/>
                 {item.name}
-            </li>
+                </li>
                )
 
            })}
             
            
-            </ul>
-            </>
+                </ul>
+                </>
     );
 }
 

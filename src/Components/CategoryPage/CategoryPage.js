@@ -1,61 +1,57 @@
 import react from 'react';
 import img from '../../assets/img/catimg.jpg';
 import SideBar from "../Commons/SideBar/SideBar";
+import {Link} from "react-router-dom";
 
 const Cat = () =>{
 
-	
+    const categoryData = [
+        {
+            id:"1",
+            typename:"Mobiles",
+            types:"Mobiles",
+            url:"/product/mobiles"
+        },
+        {
+            id:"2",
+            typename:"Laptops",
+            types:"Laptops",
+            url:"/product/laptops"
+        },
+        {
+            id:"3",
+            typename:"TV",
+            types:"Tv",
+            url:"/product/tv"
+        },
+        {
+            id:"4",
+            typename:"Cloths",
+            types:"Cloths",
+            url:"/product/cloths"
+        }
+    ]
+   
 
     return(
         <>
-        
-       
-           
-          <SideBar>
-          <div >
-			<h3 class="text-center">
-				h3. Lorem ipsum dolor sit amet.
-			</h3>
-			<div class="row">
-				<div class="col-md-4">
-                <div class="card" style={{width:"18rem"}}>
-  <img src={img} class="card-img-top" alt="..."/>
-  <div class="card-body">
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  </div>
-</div>
-				</div>
-	
-
-				
-			</div>
-			<div class="row">
-				<div class="col-md-3">
-				</div>
-				<div class="col-md-3">
-				</div>
-				<div class="col-md-3">
-				</div>
-				<div class="col-md-3">
+          <div className="container">
+			<h3 className="text-center">All Categories</h3>
+			<div className="row">
+                {categoryData && categoryData.map((i) => {
+                    return(
+                        <div key={i.id} className="col-md-3">
+                        <div  className="card" >
+                        <img src={img} className="card-img-top" alt="..."/>
+                        <div className="card-body">
+                        <p className="card-text"><Link type={i.types} to={i.url}  >{i.typename}</Link></p>
+                        </div>
+                        </div>
+				        </div>
+                    )
+                })}
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-md-3">
-				</div>
-				<div class="col-md-3">
-				</div>
-				<div class="col-md-3">
-				</div>
-				<div class="col-md-3">
-				</div>
-			</div>
-		</div>
-
-          </SideBar>
-      
-        
- 
-            
         </> 
     );
 }

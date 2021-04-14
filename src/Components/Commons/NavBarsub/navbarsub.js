@@ -13,7 +13,7 @@ const Navsub = () =>{
            
             
             <div className="collapse navbar-collapse" id="navbarSub">
-            {/* <button class="btn btn-outline-dark btn-sm" type="button"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBackdrop" aria-controls="offcanvasWithBackdrop">
+            {/* <button className="btn btn-outline-dark btn-sm" type="button"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBackdrop" aria-controls="offcanvasWithBackdrop">
            All
             </button> 
 &nbsp;&nbsp; */}
@@ -42,12 +42,12 @@ const Navsub = () =>{
       
 
 
-<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasWithBackdrop" aria-labelledby="offcanvasWithBackdropLabel">
-  <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="offcanvasWithBackdropLabel">Offcanvas with backdrop</h5>
-    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+<div className="offcanvas offcanvas-start" tabIndex={-1} id="offcanvasWithBackdrop" aria-labelledby="offcanvasWithBackdropLabel">
+  <div className="offcanvas-header">
+    <h5 className="offcanvas-title" id="offcanvasWithBackdropLabel">Offcanvas with backdrop</h5>
+    <button type="button" className="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
-  <div class="offcanvas-body">
+  <div className="offcanvas-body">
     <p>.....</p>
   </div>
 </div>

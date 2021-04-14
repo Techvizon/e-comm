@@ -1,45 +1,76 @@
 import React from 'react';
 import img from '../../assets/img/iphone.jpg';
+import i1 from '../../assets/img/iphone.jpg';
 
 function Random() {
     return(
-      <div className="card-group">
-        <div className="card">
-          <img src={img} className="card-img-top" alt="IMAGE"/>
-        <div className="card-body">
-          <h5 className="card-title">iPhone 12</h5>
-          <p className="card-text">6.1-inch (15.5 cm diagonal) Super Retina XDR display
-                                   Ceramic Shield, tougher than any smartphone glass
-                                   A14 Bionic chip, the fastest chip ever in a smartphone
-                                   Advanced dual-camera system with 12MP Ultra Wide and Wide cameras; Night mode, Deep Fusion, Smart HDR 3, 4K Dolby Vision HDR recording </p>
-          <p className="card-text"><small className="text-muted">Lastest Product</small></p>
-        </div>
-        </div>
-        <div className="card">
-          <img src={img} className="card-img-top" alt="IMAGE"/>
-        <div className="card-body">
-          <h5 className="card-title">iPhone 12</h5>
-          <p className="card-text">6.1-inch (15.5 cm diagonal) Super Retina XDR display
-                                   Ceramic Shield, tougher than any smartphone glass
-                                   A14 Bionic chip, the fastest chip ever in a smartphone
-                                   Advanced dual-camera system with 12MP Ultra Wide and Wide cameras; Night mode, Deep Fusion, Smart HDR 3, 4K Dolby Vision HDR recording </p>
-          <p className="card-text"><small className="text-muted">Lastest Product</small></p>
-        </div>
-        </div>
-        <div className="card">
-          <img src={img} className="card-img-top" alt="IMAGE"/>
-        <div className="card-body">
-          <h5 className="card-title">iPhone 12</h5>
-          <p className="card-text">6.1-inch (15.5 cm diagonal) Super Retina XDR display
-                                   Ceramic Shield, tougher than any smartphone glass
-                                   A14 Bionic chip, the fastest chip ever in a smartphone
-                                   Advanced dual-camera system with 12MP Ultra Wide and Wide cameras; Night mode, Deep Fusion, Smart HDR 3, 4K Dolby Vision HDR recording </p>
-          <p className="card-text"><small className="text-muted">Lastest Product</small></p>
-        </div>
-        </div>        
-      </div>
+      <>
+      <div className="row">
+                    <div className="col-md-2">
+                    <div className="card" style={{width: "18rem"}}>
+                       <img src={i1} className="card-img-top" alt="..."/>
+                    <div className="card-body">
+                        <h5 className="card-title">iPhone</h5>
+                        <p className="card-text">Super Retina XDR display</p>
+                        <a href="#" className="btn btn-danger">Buy Now</a>         <a href="#" className="btn btn-warning">Add To Cart</a>
+                    </div>
+                    </div>
+                    </div>
+                    <div className="col-md-2">
+                    <div className="card" style={{width: "18rem"}}>
+                       <img src={i1} className="card-img-top" alt="..."/>
+                    <div className="card-body">
+                        <h5 className="card-title">iPhone</h5>
+                        <p className="card-text">Super Retina XDR display</p>
+                        <a href="#" className="btn btn-danger">Buy Now</a>         <a href="#" className="btn btn-warning">Add To Cart</a>
+                    </div>
+                    </div>
+                    </div>
+                    <div className="col-md-2">
+                    <div className="card" style={{width: "18rem"}}>
+                       <img src={i1} className="card-img-top" alt="..."/>
+                    <div className="card-body">
+                        <h5 className="card-title">iPhone</h5>
+                        <p className="card-text">Super Retina XDR display</p>
+                        <a href="#" className="btn btn-danger">Buy Now</a>         <a href="#" className="btn btn-warning">Add To Cart</a>
+                    </div>
+                    </div>
+                    </div>
+                    <div className="col-md-2">
+                    <div className="card" style={{width: "18rem"}}>
+                       <img src={i1} className="card-img-top" alt="..."/>
+                    <div className="card-body">
+                        <h5 className="card-title">iPhone</h5>
+                        <p className="card-text">Super Retina XDR display</p>
+                        <a href="#" className="btn btn-danger">Buy Now</a>         <a href="#" className="btn btn-warning">Add To Cart</a>
+                    </div>
+                    </div>
+                    </div>
+                    <div className="col-md-2">
+                    <div className="card" style={{width: "18rem"}}>
+                       <img src={i1} className="card-img-top" alt="..."/>
+                    <div className="card-body">
+                        <h5 className="card-title">iPhone</h5>
+                        <p className="card-text">Super Retina XDR display</p>
+                        <a href="#" className="btn btn-danger">Buy Now</a>         <a href="#" className="btn btn-warning">Add To Cart</a>
+                    </div>
+                    </div>
+                    </div>
+                    <div className="col-md-2">
+                    <div className="card" style={{width: "18rem"}}>
+                       <img src={i1} className="card-img-top" alt="..."/>
+                    <div className="card-body">
+                        <h5 className="card-title">iPhone</h5>
+                        <p className="card-text">Super Retina XDR display</p>
+                        <a href="#" className="btn btn-danger">Buy Now</a>         <a href="#" className="btn btn-warning">Add To Cart</a>
+                    </div>
+                    </div>
+                    </div>
+                </div>
+
+
       
-      
+      </>
     );
 }
 
