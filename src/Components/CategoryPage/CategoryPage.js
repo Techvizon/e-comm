@@ -1,5 +1,8 @@
 import react from 'react';
-import img from '../../assets/img/catimg.jpg';
+import i1 from '../../assets/img/catimg.jpg';
+import i2 from '../../assets/img/laptops.jpg';
+import i3 from '../../assets/img/tv.jpg';
+import i4 from '../../assets/img/cloth.jpg';
 import SideBar from "../Commons/SideBar/SideBar";
 import {Link} from "react-router-dom";
 
@@ -10,25 +13,29 @@ const Cat = () =>{
             id:"1",
             typename:"Mobiles",
             types:"Mobiles",
-            url:"/product/mobiles"
+            url:"/product/mobiles",
+            img:i1
         },
         {
             id:"2",
             typename:"Laptops",
             types:"Laptops",
-            url:"/product/laptops"
+            url:"/product/laptops",
+            img:i2
         },
         {
             id:"3",
             typename:"TV",
             types:"Tv",
-            url:"/product/tv"
+            url:"/product/tv",
+            img:i3
         },
         {
             id:"4",
             typename:"Cloths",
             types:"Cloths",
-            url:"/product/cloths"
+            url:"/product/cloths",
+            img:i4
         }
     ]
    
@@ -41,12 +48,14 @@ const Cat = () =>{
                 {categoryData && categoryData.map((i) => {
                     return(
                         <div key={i.id} className="col-md-3">
+                        <Link type={i.types} to={i.url} style={{textDecoration:"none"}} >
                         <div  className="card" >
-                        <img src={img} className="card-img-top" alt="..."/>
+                        <img src={i.img} className="card-img-top" alt="..."/>
                         <div className="card-body">
-                        <p className="card-text"><Link type={i.types} to={i.url}  >{i.typename}</Link></p>
+                        <h6 className="card-text text-center" style={{color:"black"}}>{i.typename}</h6>
                         </div>
                         </div>
+                        </Link>
 				        </div>
                     )
                 })}

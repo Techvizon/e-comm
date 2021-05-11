@@ -8,12 +8,8 @@ import Random from '../Commons/randomproducts';
 
 function Landingpage() {
     return(
-        <div>
-            
-             
+        <div> 
              <Slid/>
-             <Random/>
-             <Random/>
              <Random/>
         </div>
            
