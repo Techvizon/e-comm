@@ -4,6 +4,8 @@ import SideBar from '../Commons/SideBar/SideBar.js'
 import i1 from '../../assets/img/iphone.jpg';
 import i2 from '../../assets/img/laptop1.jpg';
 import GetFilters from '../Helpers/GetFilters';
+import Product from '../ProductPage/ProductPage';
+import { Link } from 'react-router-dom';
 
 const Prolist = (props) =>{
 
@@ -185,7 +187,7 @@ const Prolist = (props) =>{
                                 <div className="card" >
                                    <img src={i.img} className="card-img-top" alt="..."/>
                                 <div className="card-body">
-                                    <h5 className="card-title">{i.title}</h5>
+                                    <Link to="/product"><h5 className="card-title">{i.title}</h5></Link>
                                     <p className="card-text">{i.about}</p>
                                     <a href="#" className="btn btn-danger">Buy Now</a>         <a href="#" className="btn btn-warning">Add To Cart</a>
                                 </div>

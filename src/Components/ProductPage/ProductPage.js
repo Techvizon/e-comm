@@ -1,6 +1,9 @@
 import React from 'react';
-
-
+import ImageGallery from 'react-image-gallery';
+import img1 from '../../assets/img/iphoneblack1.jpeg';
+import img1s from '../../assets/img/iphoneblack1small.jpeg';
+import img2 from '../../assets/img/iphoneblack2.jpeg';
+import img2s from '../../assets/img/iphoneblack2small.jpeg';
 import img from '../../assets/img/iphone.jpg';
 import inr from '../../assets/img/inr.png';
 import star from '../../assets/img/star.png';
@@ -8,45 +11,34 @@ import starh from '../../assets/img/starhalf.png';
 import check from '../../assets/img/check.png';
 import del from '../../assets/img/del.png';
 import next from '../../assets/img/next.png';
-
-function Product () {
+import "react-image-gallery/styles/css/image-gallery.css";
+const Product = (props) =>{
+    const images = [
+        {
+          original: img1,
+          thumbnail: img1s,
+        },
+        {
+          original: img2,
+          thumbnail: img2s,
+        },
+      ];
     return(
         <>
-
-        <div className='container-fluid'>
+        <div className='container'>
             <div className='row'>
                 <div className='col-mid-12'>
-                    <h2>Categories<img src={next}/>Mobiles<img src={next}/>iPhone 12</h2>
+                    <h4>iPhone 12</h4>
                 </div>
             </div>
         </div>
-        <div className='container-fluid'>
-            <div className='row'>
-                <div className='col-md-6'>
-                  <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
-                  <div className="carousel-inner">
-                  <div className="carousel-item active">
-                     <img src={img} className="d-block w-100" alt="IMAGE 1"/>
-                  </div>
-                  <div className="carousel-item">
-                     <img src={img} className="d-block w-100" alt="IMAGE 2"/>
-                  </div>
-                  <div className="carousel-item">
-                     <img src={img} className="d-block w-100" alt="IMAGE 3"/>
-                  </div>
-                  </div>
-                    <a className="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                     <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                     <span className="sr-only">Previous</span>
-                    </a>
-                    <a className="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span className="sr-only">Next</span>
-                    </a>
-                   </div>
-                </div>
-                <div className='col-md-6'>
-                      <h3>iPhone 12</h3>
+        <div class="container">
+            <div class="row">
+            <div class="col-md-4">
+            <ImageGallery showPlayButton={false} showNav={false} showFullscreenButton={false} thumbnailPosition="left" items={images} />
+            </div>
+            <div class="col-sm-6">
+            <h3>iPhone 12</h3>
                       <h1><img src={inr}/>59999</h1>
                       <br/>
                       <p><img src={star}/><img src={star}/><img src={star}/><img src={star}/><img src={starh}/>200+Ratings</p>
@@ -58,10 +50,10 @@ function Product () {
                       <p><img src={del}/>Delivery By Next Monday</p>
                       <br/>
                       <button type="button" className="btn btn-danger">Add To Cart</button>  <button type="button" className="btn btn-warning">Buy Now</button>
-                </div>
             </div>
-        </div>
-        <div className='container-fluid'>
+    </div>
+</div>
+<div className='container-fluid'>
             <div className='row'>
                 <div className='col-md-12'>
                     <div className="accordion" id="accordionExample">
