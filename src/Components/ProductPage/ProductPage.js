@@ -23,12 +23,81 @@ const Product = (props) =>{
           thumbnail: img2s,
         },
       ];
+      const singleproductData =[
+        {
+            id:"1",
+            title: "iPhone",
+            rating: "5",
+            reviews:"400+",
+            price: "69999",
+            discount:"10%",
+            tax:"10%",
+            offers: [
+                {
+                bank_offers: [
+                    {
+                        text: "SBI Credit Card Offer",
+                        tnc:"Terms & Conditions",
+                        extLink:""
+                    }
+                ],
+                exchange_offers: [
+                    {
+                        text: "Old Phone Exchange",
+                        tnc:"Terms & Conditions",
+                        oldproductname:"Apple",
+                        price:"10000"
+                    }
+                ],
+                emi_offers: [
+                    {
+                        text: "SBI and ICICI Emi options",
+                        tnc:"Terms & Conditions",
+                        extLink:"",
+                        emiamount:"60000"
+                    }
+                ]
+            }
+            ],
+            promtions:{
+                text:"Get Cover Free",
+                price:""
+            },
+            productType:{
+                color:[
+                    {
+                        id:"2",
+                        name:"Black",
+                        image:""
+                    }
+                ],
+                storage:[
+                    {
+                        id:"3",
+                        name:"64 GB",
+                        image:""
+                    }
+                ],
+                variants:[
+                    {
+                        id:"4",
+                        name:"iPhone 12 Pro",
+                        image:""
+                    }
+                ]
+            },
+            productDetails:"6.1-inch 15.5 cm diagonal Super Retina XDR display Ceramic Shield, tougher than any smartphone glass A14 Bionic chip, the fastest chip ever in a smartphone Advanced dual-camera system with 12MP Ultra Wide and Wide cameras; Night mode, Deep Fusion, Smart HDR 3, 4K Dolby Vision HDR recording.",
+            highlightDetails:"Retina Display",
+            technicalDetails:"4 GB Ram",
+            productDescription:"Six Different Colours"
+        }
+      ]
     return(
         <>
         <div className='container'>
             <div className='row'>
                 <div className='col-mid-12'>
-                    <h4>iPhone 12</h4>
+                    <h4>{singleproductData.title}</h4>
                 </div>
             </div>
         </div>
@@ -37,22 +106,27 @@ const Product = (props) =>{
             <div class="col-md-4">
             <ImageGallery showPlayButton={false} showNav={false} showFullscreenButton={false} thumbnailPosition="left" items={images} />
             </div>
-            <div class="col-sm-6">
-            <h3>iPhone 12</h3>
-                      <h1><img src={inr}/>59999</h1>
-                      <br/>
-                      <p><img src={star}/><img src={star}/><img src={star}/><img src={star}/><img src={starh}/>200+Ratings</p>
-                      <br/>
-                      <p><img src={check}/> Bank Offer</p>
-                      <p><img src={check}/> Exchange Offer</p>
-                      <p><img src={check}/> Instant Discount</p>
-                      <br/>
-                      <p><img src={del}/>Delivery By Next Monday</p>
-                      <br/>
-                      <button type="button" className="btn btn-danger">Add To Cart</button>  <button type="button" className="btn btn-warning">Buy Now</button>
-            </div>
-    </div>
+            {singleproductData.map((i)=>{
+                return(
+                    <div key={i.id} class="col-sm-6">
+                    <h3>{i.title}</h3>
+                    <h1><img src={inr}/>{i.price}</h1>
+                    <br/>
+                    <p><img src={star}/><img src={star}/><img src={star}/><img src={star}/><img src={starh}/>{i.rating} Rating</p>
+                    <br/>
+                    <p><img src={check}/> {i.reviews} Reviews</p>
+                    <p><img src={check}/> {i.bank_offers} Bank Offers</p>
+                    <p><img src={check}/> {i.exchange_offers} Exchange Offers</p>
+                    <p><img src={check}/> {i.discount} Discounts</p>
+                    <br/>
+                    <p><img src={del}/>Delivery By Next Monday</p>
+                    <br/>
+                    <button type="button" className="btn btn-danger">Add To Cart</button>  <button type="button" className="btn btn-warning">Buy Now</button>
+                    </div>
+                )})}
+           </div>
 </div>
+<hr />
 <div className='container-fluid'>
             <div className='row'>
                 <div className='col-md-12'>
@@ -92,9 +166,11 @@ const Product = (props) =>{
                         </div>
                         </div>
                         </div>
+                        
                </div>
+               
             </div>
-        </div>
+           </div>
         </>
     );
 }
