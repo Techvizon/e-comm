@@ -1,178 +1,89 @@
-import React from 'react';
-import ImageGallery from 'react-image-gallery';
-import img1 from '../../assets/img/iphoneblack1.jpeg';
-import img1s from '../../assets/img/iphoneblack1small.jpeg';
-import img2 from '../../assets/img/iphoneblack2.jpeg';
-import img2s from '../../assets/img/iphoneblack2small.jpeg';
-import img from '../../assets/img/iphone.jpg';
-import inr from '../../assets/img/inr.png';
-import star from '../../assets/img/star.png';
-import starh from '../../assets/img/starhalf.png';
-import check from '../../assets/img/check.png';
-import del from '../../assets/img/del.png';
-import next from '../../assets/img/next.png';
-import "react-image-gallery/styles/css/image-gallery.css";
-const Product = (props) =>{
-    const images = [
-        {
-          original: img1,
-          thumbnail: img1s,
-        },
-        {
-          original: img2,
-          thumbnail: img2s,
-        },
-      ];
-      const singleproductData =[
-        {
-            id:"1",
-            title: "iPhone",
-            rating: "5",
-            reviews:"400+",
-            price: "69999",
-            discount:"10%",
-            tax:"10%",
-            offers: [
-                {
-                bank_offers: [
-                    {
-                        text: "SBI Credit Card Offer",
-                        tnc:"Terms & Conditions",
-                        extLink:""
-                    }
-                ],
-                exchange_offers: [
-                    {
-                        text: "Old Phone Exchange",
-                        tnc:"Terms & Conditions",
-                        oldproductname:"Apple",
-                        price:"10000"
-                    }
-                ],
-                emi_offers: [
-                    {
-                        text: "SBI and ICICI Emi options",
-                        tnc:"Terms & Conditions",
-                        extLink:"",
-                        emiamount:"60000"
-                    }
-                ]
-            }
-            ],
-            promtions:{
-                text:"Get Cover Free",
-                price:""
-            },
-            productType:{
-                color:[
-                    {
-                        id:"2",
-                        name:"Black",
-                        image:""
-                    }
-                ],
-                storage:[
-                    {
-                        id:"3",
-                        name:"64 GB",
-                        image:""
-                    }
-                ],
-                variants:[
-                    {
-                        id:"4",
-                        name:"iPhone 12 Pro",
-                        image:""
-                    }
-                ]
-            },
-            productDetails:"6.1-inch 15.5 cm diagonal Super Retina XDR display Ceramic Shield, tougher than any smartphone glass A14 Bionic chip, the fastest chip ever in a smartphone Advanced dual-camera system with 12MP Ultra Wide and Wide cameras; Night mode, Deep Fusion, Smart HDR 3, 4K Dolby Vision HDR recording.",
-            highlightDetails:"Retina Display",
-            technicalDetails:"4 GB Ram",
-            productDescription:"Six Different Colours"
-        }
-      ]
+import react from 'react';
+import { Link } from 'react-router-dom';
+import i1 from '../../assets/img/iphone1.jpg';
+import i2 from '../../assets/img/iphone2.jpg';
+import i3 from '../../assets/img/iphone3.jpg';
+import i4 from '../../assets/img/iphone4.jpg';
+import i5 from '../../assets/img/iphone5.jpg';
+import i6 from '../../assets/img/iphone6.jpg';
+import review from '../../assets/img/review.png';
+import classes from '../ProductPage/ProductPage.css';
+
+const Product = () => {
     return(
         <>
-        <div className='container'>
-            <div className='row'>
-                <div className='col-mid-12'>
-                    <h4>{singleproductData.title}</h4>
+            <div  class="container">
+                <div className="row">
+                <nav aria-label="breadcrumb">
+                <ol className="breadcrumb" style={{textDecoration: 'none'}}>
+                    <li class="breadcrumb-item"><a><Link  to="/">Home</Link></a></li>
+                    <li class="breadcrumb-item"><a><Link  to="/categories">Categories</Link></a></li>
+                    <li class="breadcrumb-item"><a><Link  to="/product/mobiles">Mobiles</Link></a></li>
+                    <li class="breadcrumb-item active" aria-current="page">iPhone 12</li>
+                </ol>
+                </nav>
                 </div>
             </div>
-        </div>
-        <div class="container">
-            <div class="row">
-            <div class="col-md-4">
-            <ImageGallery showPlayButton={false} showNav={false} showFullscreenButton={false} thumbnailPosition="left" items={images} />
-            </div>
-            {singleproductData.map((i)=>{
-                return(
-                    <div key={i.id} class="col-sm-6">
-                    <h3>{i.title}</h3>
-                    <h1><img src={inr}/>{i.price}</h1>
+            <div class="container-fluid">
+                <div class="row">
+                <div class="col-md-6">
+                    
+                        <div class="row">
+                        <div class="col grc"><img src={i1} class="card-img" alt="IMAGE"/></div>
+                        <div class="col grc"><img src={i2} class="card-img" alt="IMAGE"/></div>
+                        </div>
+                        <div class="row">
+                        <div class="col grc"><img src={i3} class="card-img" alt="IMAGE"/></div>
+                        <div class="col grc"><img src={i4} class="card-img" alt="IMAGE"/></div>
+                        </div>
+                        <div class="row">
+                        <div class="col grc"><img src={i5} class="card-img" alt="IMAGE"/></div>
+                        <div class="col grc"><img src={i6} class="card-img" alt="IMAGE"/></div>
+                        </div>
+                    
+                </div>
+                <div class="col-md-6">
+                    <h1 className="title">iPhone 12</h1>
+                    <h1 className="title-sub">Apple iPhone 12 (128 GB) Black</h1>
+                    <h5 className="title-sub" style={{borderBottom:"2px solid #535665"}}><img src={review}/>  500+ Reviews  </h5>
                     <br/>
-                    <p><img src={star}/><img src={star}/><img src={star}/><img src={star}/><img src={starh}/>{i.rating} Rating</p>
+                    <h3><strong> ₹ 69999 </strong></h3>
                     <br/>
-                    <p><img src={check}/> {i.reviews} Reviews</p>
-                    <p><img src={check}/> {i.bank_offers} Bank Offers</p>
-                    <p><img src={check}/> {i.exchange_offers} Exchange Offers</p>
-                    <p><img src={check}/> {i.discount} Discounts</p>
+                    <h5> Colours </h5>
+                    <img src="https://m.media-amazon.com/images/I/417PwBC+iEL._SS36_.jpg" alt="(PRODUCT)RED" style={{height:'36px'} , {width:'36px'}} ></img><img src="https://m.media-amazon.com/images/I/417PwBC+iEL._SS36_.jpg" alt="(PRODUCT)RED" style={{height:'36px'} , {width:'36px'}} ></img>
                     <br/>
-                    <p><img src={del}/>Delivery By Next Monday</p>
                     <br/>
-                    <button type="button" className="btn btn-danger">Add To Cart</button>  <button type="button" className="btn btn-warning">Buy Now</button>
+                    <button type="button" className="btn btn-dark btn-lg">Add To Cart</button>  <button type="button" className="btn btn-outline-dark btn-lg">Add to Wishlist</button>
+                    <br/>
+                    <br/>
+                    <h5>Delivery</h5>
+                    <input placeholder="Enter a PIN code" value=""></input>
+                    <br/>
+                    <br/>
+                    <h5>Available Offers</h5>
+                    <div className="btn-group dropend" style={{borderBottom:"2px solid #535665"}}>
+                    <button type="button" className="btn btn-outline-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Bank Offers</button>
+                    <ul className="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <li><a className="dropdown-item" href="#">Bank1</a></li>
+                    <li><a className="dropdown-item" href="#">Bank2</a></li>
+                    </ul>
+                    <button type="button" className="btn btn-outline-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Exchange Offers</button>
+                    <ul className="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <li><a className="dropdown-item" href="#">Company</a></li>
+                    <li><a className="dropdown-item" href="#">Model</a></li>
+                    <li><a className="dropdown-item" href="#">Estimated Price</a></li>
+                    </ul>
                     </div>
-                )})}
-           </div>
-</div>
-<hr />
-<div className='container-fluid'>
-            <div className='row'>
-                <div className='col-md-12'>
-                    <div className="accordion" id="accordionExample">
-                        <div className="card">
-                        <div className="card-header" id="headingOne">
-                            <h2 className="mb-0">
-                            <button className="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    About
-                            </button>
-                            </h2>
-                        </div>
-                        <div id="collapseOne" className="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                        <div className="card-body">
-                                   6.1-inch (15.5 cm diagonal) Super Retina XDR display
-                                   Ceramic Shield, tougher than any smartphone glass
-                                   A14 Bionic chip, the fastest chip ever in a smartphone
-                                   Advanced dual-camera system with 12MP Ultra Wide and Wide cameras; Night mode, Deep Fusion, Smart HDR 3, 4K Dolby Vision HDR recording.
-                        </div>
-                        </div>
-                        </div>
-                        <div className="card">
-                        <div className="card-header" id="headingThree">
-                            <h2 className="mb-0">
-                            <button className="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    Reviews
-                            </button>
-                            </h2>
-                        </div>
-                        <div id="collapseThree" className="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                        <div className="card-body">
-                        <p><img src={star}/><img src={star}/><img src={star}/><img src={star}/><img src={starh}/>4.5 Rating By Customer 1</p>
-                        <p><img src={star}/><img src={star}/><img src={star}/><img src={star}/>4 Rating By Customer 2</p>
-                        <p><img src={star}/><img src={star}/><img src={star}/><img src={star}/><img src={star}/>5 Rating By Customer 3</p>
-                        <p><img src={star}/><img src={star}/><img src={star}/><img src={star}/><img src={starh}/>4.5 Rating By Customer 4</p>      
-                        </div>
-                        </div>
-                        </div>
-                        </div>
-                        
-               </div>
-               
+                    <br/>
+                    <br/>
+                    <h5>Product Details</h5>
+                    <p>6.1-inch (15.5 cm diagonal) Super Retina XDR display Ceramic Shield, tougher than any smartphone glass A14 Bionic chip, the fastest chip ever in a smartphone Advanced dual-camera system with 12MP Ultra Wide and Wide cameras; Night mode, Deep Fusion, Smart HDR 3, 4K Dolby Vision HDR recording.</p>
+                    
+                </div>
+                </div>
             </div>
-           </div>
         </>
-    );
+    )
 }
 
-export default Product;
+export default Product

@@ -26,6 +26,7 @@ const Routes = () => {
         <Router>
         <Navbar/>
         <Navsub/>
+        
             <Switch>
 
                 <Route path="/" component={Landingpage} exact={true}  />

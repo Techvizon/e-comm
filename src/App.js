@@ -1,26 +1,25 @@
 import { useAtom } from 'jotai';
 import React,{useEffect} from 'react'
 import { testAtom } from './atom/test.atom';
+import firestore from './configs/firebase.config';
 import useFireFetch from './hooks/firebase.hook';
 import Routes from './Routes'
 
 const App = () =>  {
 
-//   useEffect(() => {
-//     fetchTestData();
-//   }, [])
+  //  useEffect(() => {
+  //   fetchTestData();
+  // }, [])
 
 
-//   const fetchTestData = async () => {
-//     const response =  firestore.collection('test');
-//     const testData =  (await response.get()).docs;
-//     console.log('testData : ',testData);
-//     testData.forEach((i)=>{
-// console.log(i.data());
-//     })
-//   }
+  // const fetchTestData = async () => {
+   //  const response =  await firestore.collection('test').doc().set({age:10, name:"a1"});
+   //  console.log("res",response)
+  // }
+     
+     
 
-// const [testData,settestData] = useAtom(testAtom);
+ //const [testData,settestData] = useAtom(testAtom);
 
 // const { data, error, isLoading } = useFireFetch('test');
 

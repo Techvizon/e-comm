@@ -1,0 +1,35 @@
+.title {
+    color: #282c3f;
+    padding: 0 20px 0 0;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1;
+}
+.title-sub {
+    color: #535665;
+    padding: 5px 20px 14px 0;
+    font-size: 20px;
+    opacity: .8;
+    font-weight: 400;
+}
+.grc { 
+
+ 
+    
+    padding-bottom: 10px;
+    background-color: transparent;
+ 
+
+}
+
+.card-img {
+    transition: 0.5s;
+}
+
+.card-img:hover{
+    -webkit-transform:  scale(1.05);
+    -moz-transform:  scale(1.05);
+   transform: scale(1.05);
+   box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+   background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+}
