@@ -8,11 +8,21 @@ import i5 from '../../assets/img/iphone5.jpg';
 import i6 from '../../assets/img/iphone6.jpg';
 import review from '../../assets/img/review.png';
 import classes from '../ProductPage/ProductPage.css';
+import Slider from './NewPage';
+
 
 const Product = () => {
+    const sliderSetttings = {
+        thumbnailPosition:'left',
+        showPlayButton:false,
+        showNav: false,
+        useTranslate3D:true,
+        slideOnThumbnailOver:false,
+        showBullets: true
+    }
     return(
         <>
-            <div  class="container">
+            <div  class="container-fluid">
                 <div className="row">
                 <nav aria-label="breadcrumb">
                 <ol className="breadcrumb" style={{textDecoration: 'none'}}>
@@ -27,9 +37,9 @@ const Product = () => {
             <div class="container-fluid">
                 <div class="row">
                 <div class="col-md-6">
-                    
-                        <div class="row">
-                        <div class="col grc"><img src={i1} class="card-img" alt="IMAGE"/></div>
+                <Slider {...sliderSetttings}/>
+                {/* <div class="row">
+                        {/* <div class="col grc"><img src={i1} class="card-img" alt="IMAGE"/></div>
                         <div class="col grc"><img src={i2} class="card-img" alt="IMAGE"/></div>
                         </div>
                         <div class="row">
@@ -39,9 +49,11 @@ const Product = () => {
                         <div class="row">
                         <div class="col grc"><img src={i5} class="card-img" alt="IMAGE"/></div>
                         <div class="col grc"><img src={i6} class="card-img" alt="IMAGE"/></div>
+                        </div> */}
                         </div>
+                        
                     
-                </div>
+                
                 <div class="col-md-6">
                     <h1 className="title">iPhone 12</h1>
                     <h1 className="title-sub">Apple iPhone 12 (128 GB) Black</h1>
@@ -82,6 +94,7 @@ const Product = () => {
                 </div>
                 </div>
             </div>
+            
         </>
     )
 }

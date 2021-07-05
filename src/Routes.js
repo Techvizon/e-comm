@@ -13,7 +13,8 @@ import Cat from "./Components/CategoryPage/CategoryPage"
 import Navbar from "./Components/Commons/Navbar/navbar";
 import Navsub from "./Components/Commons/NavBarsub/navbarsub";
 import Prolist from "./Components/Product-Listing/productlisting";
-import Ct from '../src/Components/TestPages/ct'
+import Ct from '../src/Components/TestPages/ct';
+
 
 
 const Routes = () => {
@@ -37,7 +38,7 @@ const Routes = () => {
                 <Route path="/product/:type" component={Prolist} exact={true}  />
 
             </Switch>
-
+        
 
         </Router>
 </>
