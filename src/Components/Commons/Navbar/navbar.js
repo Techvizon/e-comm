@@ -18,11 +18,11 @@ const Navbar = () => {
     return(
        <>
        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-               <a className="navbar-brand" href="#"><img src={logo} alt="LOGO" width="30" height="24"/><b> Online Market </b></a>
+               <a className="navbar-brand" href="/"><img src={logo} alt="LOGO" width="30" height="24"/><b> Online Market </b></a>
                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="navbarMain">
                 <span className="navbar-toggler-icon"></span>
                </button>
-               <div className="collapse navbar-collapse" id="navbarMain">
+               <div className="container-fluid collapse navbar-collapse" id="navbarMain">
                <ul className="navbar-nav ml-auto ">
                <li className="nav-item active">
                   <Link className="nav-link" to="/">Home</Link>  
