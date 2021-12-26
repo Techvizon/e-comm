@@ -1,0 +1,16 @@
+.cart_icon {
+
+    color: orange ;
+    font-size: 1.5rem;
+
+}
+.wrapper{
+    position: relative;
+    }
+.wrapper span{
+    position: absolute;
+    top: -9px;
+    right: 6px; 
+    color: white;
+    font-weight: bold;
+    }
