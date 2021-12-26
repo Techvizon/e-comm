@@ -3,7 +3,7 @@ import React,{useEffect} from 'react'
 import { testAtom } from './atom/test.atom';
 import firestore from './configs/firebase.config';
 import useFireFetch from './hooks/firebase.hook';
-import Routes from './Routes'
+import RoutesList from './RoutesList'
 
 const App = () =>  {
 
@@ -37,7 +37,7 @@ const App = () =>  {
 
   return(
     
-  <Routes/>
+  <RoutesList/>
   );
 
 }

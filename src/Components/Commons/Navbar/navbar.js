@@ -2,10 +2,19 @@ import React from 'react';
 
 import logo from '../../../assets/img/logo.png';
 
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
+import { useAtom } from 'jotai';
+import { authAtom } from '../../../atom/auth.atom';
 
 
-function Navbar() {
+const Navbar = () => {
+
+   const [isAuth,setAuth] = useAtom(authAtom);
+
+   const logoutHandler = () => {
+      setAuth(false);
+   }
+
     return(
        <>
        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -27,12 +36,19 @@ function Navbar() {
                  <a className="nav-link" href="#">Add To Cart</a>
               </li>
 
-              <li className="nav-item">
-                 <Link className="nav-link" to="/signup">SignUp</Link>
-              </li>
+            
 
                      
              </ul>
+             <ul className="navbar-nav ms-auto">
+             { isAuth ? <li className="">
+             <button type="button" class="btn btn-outline-warning" onClick={()=>{logoutHandler()}}>LogOut</button>
+              </li> : <li className="nav-item">
+                 <Link to="../signin" className="nav-link btn btn-outline-danger" >LogIn</Link>
+              </li>
+              }
+             </ul>
+             
              </div>
             
         </nav>

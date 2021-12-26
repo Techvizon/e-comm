@@ -2,13 +2,13 @@ import React from 'react';
 
 
 import '../Account/Account.css'
-import { useHistory } from "react-router-dom";
+
 import {Link} from "react-router-dom";
 
 
 function SignUP() {
 
-  console.log(useHistory());
+  
 
     return(
         <>

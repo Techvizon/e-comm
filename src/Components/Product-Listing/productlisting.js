@@ -5,9 +5,10 @@ import i1 from '../../assets/img/iphone.jpg';
 import i2 from '../../assets/img/laptop1.jpg';
 import GetFilters from '../Helpers/GetFilters';
 import Product from '../ProductPage/ProductPage';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const Prolist = (props) =>{
+    const location = useLocation();
 
     
     const productData = [
@@ -170,7 +171,8 @@ const Prolist = (props) =>{
 
     // const [displayData,setdisplayData] = useState({})
     const displayData = productData.filter((i)=>{
-            return i.type === props.location.pathname.toString().split('/')[2];
+        console.log(location.pathname)
+            return i.type === location.pathname.toString().split('/')[2];
         })[0];
 
 
@@ -178,7 +180,7 @@ const Prolist = (props) =>{
     return(
         <>
         
-        <SideBar type={props.location.pathname.toString().split('/')[2]} >
+        <SideBar type={location.pathname.toString().split('/')[2]} >
                   <h3 className="text-center">{displayData.product}</h3>
                     <div className="row">
                         { displayData.data.map((i) => {
@@ -187,7 +189,7 @@ const Prolist = (props) =>{
                                 <div className="card" >
                                    <img src={i.img} className="card-img-top" alt="..."/>
                                 <div className="card-body">
-                                    <Link to="/product"><h5 className="card-title">{i.title}</h5></Link>
+                                    <Link to="../product"><h5 className="card-title">{i.title}</h5></Link>
                                     <p className="card-text">{i.about}</p>
                                     <a href="#" className="btn btn-danger">Buy Now</a>         <a href="#" className="btn btn-warning">Add To Cart</a>
                                 </div>
